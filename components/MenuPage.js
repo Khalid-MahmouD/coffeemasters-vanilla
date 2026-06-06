@@ -16,10 +16,12 @@ export class MenuPage extends BaseComponent {
     this.render();
   }
 
-  render() {
+  async render() {
     if (app.store.menu) {
       this.root.querySelector('#menu').innerHTML = '';
-      for (let category of app.store.menu) {
+      const menu = await app.store.menu;
+      console.log(menu);
+      for (let category of menu) {
         const liCategory = document.createElement('li');
         liCategory.innerHTML = `
           <h3>${category.name}</h3>

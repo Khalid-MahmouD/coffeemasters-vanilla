@@ -1,7 +1,6 @@
-import { loadData } from './services/Menu.js';
 import { MenuPage } from './components/MenuPage.js';
 import { OrderPage } from './components/OrderPage.js';
-import productItem from './components/ProducItem.js';
+import ProductItem from './components/ProductItem.js';
 import Router from './services/Router.js';
 import Store from './services/Store.js';
 import DetailsPage from './components/detialsPage.js';
@@ -17,7 +16,6 @@ app.testRender = testRender;
 
 globalThis.addEventListener('DOMContentLoaded', async () => {
   app.router.init();
-  await loadData();
 });
 
 globalThis.addEventListener('DOMContentLoaded', () => {});
