@@ -1,10 +1,6 @@
 import { BaseComponent } from './BaseComponent.js';
 
 export class MenuPage extends BaseComponent {
-  constructor() {
-    super();
-  }
-
   async connectedCallback() {
     await this._loadCss('/components/MenuPage.css');
     const template = document.getElementById('menu-page-template');
