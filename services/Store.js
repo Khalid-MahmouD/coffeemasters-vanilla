@@ -8,10 +8,10 @@ const Store = {
 const proxiedStore = new Proxy(Store, {
   get(target, property) {
     if (property === 'menu') {
-      if (!target._menu) {
-        target._menu = API.fetchMenu();
+      if (!target.menu) {
+        target.menu = API.fetchMenu();
       }
-      return target._menu;
+      return target.menu;
     }
     return target[property];
   },
