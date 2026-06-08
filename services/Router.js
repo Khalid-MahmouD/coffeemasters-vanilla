@@ -43,7 +43,7 @@ const Router = {
         if (route.startsWith('/product-')) {
           console.log('Navigating to product details for route:', route);
           pageElement = document.createElement('details-page');
-          pageElement.dataset.productId = route.substring(route.lastIndexOf('-') + 1);
+          pageElement.dataset.id = route.substring(route.lastIndexOf('-') + 1);
         }
         break;
     }
